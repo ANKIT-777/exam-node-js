@@ -5,9 +5,10 @@
 // Expected Output:Sum: 20
 
 function calculateSum(numbers, callback) {
-    var sum = numbers.reduce(function(acc, num) {
-      return acc + num;
-    }, 0);
+    var sum = 0;
+    for (var num of numbers) {
+      sum += num;
+    }
     callback(sum);
   }
   
@@ -15,5 +16,6 @@ function calculateSum(numbers, callback) {
     console.log("Sum: " + sum);
   }
   
+ 
   calculateSum([2, 4, 6, 8], callback);
   
